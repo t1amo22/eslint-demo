@@ -1,0 +1,27 @@
+{
+  "name": "eslint-demo",
+  "version": "1.0.0",
+  "description": "静态代码分析，问题代码协助修复集成到编码，提交，打包过程中，及早发现并协助修复问题 ###### 优点 代码风格，可维护性，代码质量，发现语法错误，减小bug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js",
+    "lint-html": "eslint **/*.js -f html -o ./reports/lint-results.html",
+    "lint-fix": "eslint --fix **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t1amo22/eslint-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t1amo22/eslint-demo/issues"
+  },
+  "homepage": "https://github.com/t1amo22/eslint-demo#readme",
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

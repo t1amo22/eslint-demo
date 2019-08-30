@@ -13,7 +13,7 @@ yarn add -D eslint
 
 ### 使用
 一般用别人已经配置好的规则
-安装Airbnb配置包：
+安装Airbnb配置包（不支持react)：
 
 ```
 yarn add -D eslint-config-airbnb-base
@@ -22,7 +22,7 @@ yarn add -D eslint-config-airbnb-base
 ###### 获取这个包的依赖
 
 ```
-npm info "eslint-config-airbnb-base@latest” peerDependencies
+npm info "eslint-config-airbnb-base@latest" peerDependencies
 ```
 
 ###### 安装依赖
@@ -38,11 +38,11 @@ yarn add -D eslint-plugin-import
 {
   "extends": "airbnb-base”,  
   "rules": { 
-    "no-console": “off” //支持console
+    "no-console": “off” //关闭no-console规则
   }
 }
 ```
-或者eslintrc.js
+或者.eslintrc.js
 
 ```js
 module.exports = {
@@ -71,8 +71,11 @@ module.exports = {
   // ...
   "scripts" : {
     "test": "echo \"Error: no test specified\" && exit 1",
+    // 检查所有js文件的代码
     "lint": "eslint **/*.js",
+    //生成一个html文件
     "lint-html": "eslint **/*.js -f html -o ./reports/lint-results.html",
+    //自动修复错误
     "lint-fix": "eslint --fix **/*.js"
   },
   // ...
